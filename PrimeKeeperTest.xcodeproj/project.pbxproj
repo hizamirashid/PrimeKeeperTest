@@ -13,6 +13,7 @@
 		D176BB41204B8E9C0027ED43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D176BB40204B8E9C0027ED43 /* Assets.xcassets */; };
 		D176BB44204B8E9C0027ED43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D176BB42204B8E9C0027ED43 /* LaunchScreen.storyboard */; };
 		D176BB4C204B928E0027ED43 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D176BB4B204B928E0027ED43 /* SettingsViewController.swift */; };
+		D176BB52204BA2000027ED43 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D176BB51204BA2000027ED43 /* Extension+UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		D176BB43204B8E9C0027ED43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D176BB45204B8E9C0027ED43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D176BB4B204B928E0027ED43 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D176BB4E204B9BDD0027ED43 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		D176BB4F204B9BF20027ED43 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		D176BB51204BA2000027ED43 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 		D176BB38204B8E9C0027ED43 /* PrimeKeeperTest */ = {
 			isa = PBXGroup;
 			children = (
+				D176BB50204BA1E10027ED43 /* Extensions */,
+				D176BB4D204B9BBB0027ED43 /* Configuration files */,
 				D176BB39204B8E9C0027ED43 /* AppDelegate.swift */,
 				D176BB3B204B8E9C0027ED43 /* ViewController.swift */,
 				D176BB4B204B928E0027ED43 /* SettingsViewController.swift */,
@@ -65,6 +71,23 @@
 				D176BB45204B8E9C0027ED43 /* Info.plist */,
 			);
 			path = PrimeKeeperTest;
+			sourceTree = "<group>";
+		};
+		D176BB4D204B9BBB0027ED43 /* Configuration files */ = {
+			isa = PBXGroup;
+			children = (
+				D176BB4E204B9BDD0027ED43 /* Debug.xcconfig */,
+				D176BB4F204B9BF20027ED43 /* Release.xcconfig */,
+			);
+			path = "Configuration files";
+			sourceTree = "<group>";
+		};
+		D176BB50204BA1E10027ED43 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D176BB51204BA2000027ED43 /* Extension+UIView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +164,7 @@
 			files = (
 				D176BB3C204B8E9C0027ED43 /* ViewController.swift in Sources */,
 				D176BB3A204B8E9C0027ED43 /* AppDelegate.swift in Sources */,
+				D176BB52204BA2000027ED43 /* Extension+UIView.swift in Sources */,
 				D176BB4C204B928E0027ED43 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +193,7 @@
 /* Begin XCBuildConfiguration section */
 		D176BB46204B8E9C0027ED43 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D176BB4E204B9BDD0027ED43 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -226,6 +251,7 @@
 		};
 		D176BB47204B8E9C0027ED43 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D176BB4F204B9BF20027ED43 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -276,6 +302,7 @@
 		};
 		D176BB49204B8E9C0027ED43 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D176BB4E204B9BDD0027ED43 /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -292,6 +319,7 @@
 		};
 		D176BB4A204B8E9C0027ED43 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D176BB4F204B9BF20027ED43 /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

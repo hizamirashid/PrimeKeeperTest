@@ -25,12 +25,24 @@
                                     <constraint firstAttribute="height" constant="44" id="O0w-tf-jNP"/>
                                     <constraint firstAttribute="width" constant="100" id="n57-GR-Ptj"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <state key="normal" title="Settings">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.08235294118" green="0.73333333329999995" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Dt-0j-ZPy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fMz-SS-t6P"/>
                             <constraint firstItem="6Dt-0j-ZPy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jQg-Dm-P18"/>
@@ -57,25 +69,56 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eW4-5i-dcN">
                                 <rect key="frame" x="137.5" y="311.5" width="100" height="44"/>
-                                <color key="backgroundColor" red="0.08235294118" green="0.73333333329999995" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.97704571490000003" green="0.37974399330000003" blue="0.58932775260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="CIh-RQ-wkA"/>
                                     <constraint firstAttribute="width" constant="100" id="mfH-St-Wzj"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <state key="normal" title="Home">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Mode:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTT-ca-id2">
+                                <rect key="frame" x="16" y="226" width="343" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpr-Q9-Xlj">
+                                <rect key="frame" x="16" y="255" width="343" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97704571490000003" green="0.37974399330000003" blue="0.58932775260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="jul-8q-C9M" firstAttribute="trailing" secondItem="cTT-ca-id2" secondAttribute="trailing" constant="16" id="1fa-c7-cX6"/>
                             <constraint firstItem="eW4-5i-dcN" firstAttribute="centerX" secondItem="XJC-7j-p1y" secondAttribute="centerX" id="7pz-eQ-eFM"/>
+                            <constraint firstItem="cTT-ca-id2" firstAttribute="leading" secondItem="jul-8q-C9M" secondAttribute="leading" constant="16" id="Bmb-JJ-9vZ"/>
+                            <constraint firstItem="Bpr-Q9-Xlj" firstAttribute="leading" secondItem="jul-8q-C9M" secondAttribute="leading" constant="16" id="JyA-9G-Q0Q"/>
+                            <constraint firstItem="eW4-5i-dcN" firstAttribute="top" secondItem="Bpr-Q9-Xlj" secondAttribute="bottom" constant="30" id="TIp-mI-sX4"/>
+                            <constraint firstItem="Bpr-Q9-Xlj" firstAttribute="top" secondItem="cTT-ca-id2" secondAttribute="bottom" constant="8" id="TY7-RP-M6D"/>
                             <constraint firstItem="eW4-5i-dcN" firstAttribute="centerY" secondItem="XJC-7j-p1y" secondAttribute="centerY" id="frt-Cm-Pm2"/>
+                            <constraint firstItem="jul-8q-C9M" firstAttribute="trailing" secondItem="Bpr-Q9-Xlj" secondAttribute="trailing" constant="16" id="nm1-xe-yMY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jul-8q-C9M"/>
                     </view>
                     <connections>
                         <outlet property="homeBtn" destination="eW4-5i-dcN" id="EG2-sL-J9w"/>
+                        <outlet property="modeLbl" destination="Bpr-Q9-Xlj" id="Zlf-Z8-dw6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xKD-gS-7tP" userLabel="First Responder" sceneMemberID="firstResponder"/>

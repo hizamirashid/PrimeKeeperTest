@@ -13,21 +13,27 @@ class SettingsViewController: UIViewController {
     
     // IBOutlets
     @IBOutlet weak var homeBtn: UIButton!
+    @IBOutlet weak var modeLbl: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // set title to navigation title
         self.title = "Settings"
+        
+        // // add action to button
         homeBtn.addTarget(self, action: #selector(showHomeAlert), for: .touchUpInside)
+        
+        // set label to their config file
+        if let mode = infoForKey("Mode") {
+            self.modeLbl.text = mode
+        }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
+    // MARK: - BUTTON ACTION
     @objc func showHomeAlert() {
         
-        let uiAlert = UIAlertController(title: "Home", message: "Going to Screen?", preferredStyle: UIAlertControllerStyle.alert)
+        let uiAlert = UIAlertController(title: "Going to Screen", message: "Home", preferredStyle: UIAlertControllerStyle.alert)
         
         uiAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
@@ -35,5 +41,15 @@ class SettingsViewController: UIViewController {
             self.navigationController?.popViewController(animated: true)
         }))
         self.present(uiAlert, animated: true, completion: nil)
+    }
+    
+    // MARK: - FUNCTION read from info plist
+    func infoForKey(_ key: String) -> String? {
+        return (Bundle.main.infoDictionary?[key] as? String)?
+            .replacingOccurrences(of: "\\", with: "")
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
 }

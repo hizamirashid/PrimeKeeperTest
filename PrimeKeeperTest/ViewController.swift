@@ -17,13 +17,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        // set navigation title
         self.title = "Home"
+        
+        // add action to button
         settingsBtn.addTarget(self, action: #selector(showSettingsAlert), for: .touchUpInside)
     }
     
+    // MARK: - BUTTON ACTION
     @objc func showSettingsAlert() {
         
-        let uiAlert = UIAlertController(title: "Settings", message: "Going to Screen?", preferredStyle: UIAlertControllerStyle.alert)
+        let uiAlert = UIAlertController(title: "Going to Screen", message: "Setting", preferredStyle: UIAlertControllerStyle.alert)
         
         uiAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
@@ -32,12 +36,10 @@ class ViewController: UIViewController {
         }))
         self.present(uiAlert, animated: true, completion: nil)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 

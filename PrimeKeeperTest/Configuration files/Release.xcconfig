@@ -1,0 +1,12 @@
+//
+//  Release.xcconfig
+//  PrimeKeeperTest
+//
+//  Created by Norhizami  on 04/03/2018.
+//  Copyright © 2018 Media Prima Digital - Norhizami. All rights reserved.
+//
+
+IS_APP_NAME = Prime Release
+IS_APP_VERSION = 1.0
+IS_APP_BUNDLE_ID = com.hizamirashid.primekeeperrelease
+IS_MODE = Release
