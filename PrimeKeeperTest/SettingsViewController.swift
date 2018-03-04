@@ -11,27 +11,28 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
+    // IBOutlets
+    @IBOutlet weak var homeBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Settings"
+        homeBtn.addTarget(self, action: #selector(showHomeAlert), for: .touchUpInside)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    func showHomeAlert() {
+    @objc func showHomeAlert() {
         
         let uiAlert = UIAlertController(title: "Home", message: "Going to Screen?", preferredStyle: UIAlertControllerStyle.alert)
         
-        uiAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
-            
-        }))
+        uiAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         uiAlert.addAction(UIAlertAction(title: "Okay", style: .default, handler: { action in
-            
-            
+            self.navigationController?.popViewController(animated: true)
         }))
         self.present(uiAlert, animated: true, completion: nil)
     }

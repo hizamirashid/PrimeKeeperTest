@@ -10,23 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // IBOutlets
+    @IBOutlet weak var settingsBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         self.title = "Home"
+        settingsBtn.addTarget(self, action: #selector(showSettingsAlert), for: .touchUpInside)
     }
     
-    func showSettingsAlert() {
+    @objc func showSettingsAlert() {
         
         let uiAlert = UIAlertController(title: "Settings", message: "Going to Screen?", preferredStyle: UIAlertControllerStyle.alert)
         
-        uiAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
-            
-        }))
+        uiAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         uiAlert.addAction(UIAlertAction(title: "Okay", style: .default, handler: { action in
-            
+            self.performSegue(withIdentifier: "segueSettings", sender: self)
         }))
         self.present(uiAlert, animated: true, completion: nil)
     }

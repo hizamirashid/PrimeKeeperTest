@@ -38,21 +38,45 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Q8H-3I-zZN"/>
+                    <connections>
+                        <outlet property="settingsBtn" destination="6Dt-0j-ZPy" id="qlt-gM-saK"/>
+                        <segue destination="BqA-x0-Hoi" kind="show" identifier="segueSettings" id="RBp-Jq-qR0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="535" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="oOd-1z-bAm">
             <objects>
-                <viewController id="BqA-x0-Hoi" sceneMemberID="viewController">
+                <viewController id="BqA-x0-Hoi" customClass="SettingsViewController" customModule="PrimeKeeperTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XJC-7j-p1y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eW4-5i-dcN">
+                                <rect key="frame" x="137.5" y="311.5" width="100" height="44"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.73333333329999995" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="CIh-RQ-wkA"/>
+                                    <constraint firstAttribute="width" constant="100" id="mfH-St-Wzj"/>
+                                </constraints>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eW4-5i-dcN" firstAttribute="centerX" secondItem="XJC-7j-p1y" secondAttribute="centerX" id="7pz-eQ-eFM"/>
+                            <constraint firstItem="eW4-5i-dcN" firstAttribute="centerY" secondItem="XJC-7j-p1y" secondAttribute="centerY" id="frt-Cm-Pm2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jul-8q-C9M"/>
                     </view>
+                    <connections>
+                        <outlet property="homeBtn" destination="eW4-5i-dcN" id="EG2-sL-J9w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xKD-gS-7tP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
